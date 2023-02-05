@@ -1,0 +1,3 @@
+[submodule "lib/filecoin-solidity"]
+	path = lib/filecoin-solidity
+	url = https://github.com/Zondax/filecoin-solidity
