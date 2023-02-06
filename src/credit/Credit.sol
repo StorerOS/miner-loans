@@ -1,18 +1,19 @@
 pragma solidity ^0.8.0;
 
-contract Credit {
     struct CreditInfo {
         address  addr;
         uint256  amount;
     }
 
+
+contract Credit {
     CreditInfo[] public credits;
 
-    function setCredit(address addr, uint256 amount) public {
+    function setOneCredit(address addr, uint256 amount) public {
         credits.push(CreditInfo(addr, amount));
     }
 
-    function getCredit() public view returns (CreditInfo[] memory){
-        return credits;
+    function getAllCredit() public returns (CreditInfo memory){
+        return credits[0];
     }
 }
