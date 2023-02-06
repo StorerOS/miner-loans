@@ -11,8 +11,12 @@ contract CreditTest is Test {
     }
 
     function testSetCredit() public {
-        addr = "0x111";
-        amount = uint256(123);
+        address addr = msg.sender;
+        uint256 amount  = uint256(123);
         credit.setCredit(addr, amount);
+
+        console.log(credit.credits);
     }
+
+
 }

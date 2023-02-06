@@ -6,7 +6,7 @@ contract Credit {
         uint256  amount;
     }
 
-    CreditInfo[] credits;
+    CreditInfo[] public credits;
 
     function setCredit(address addr, uint256 amount) public {
         credits.push(CreditInfo(addr, amount));
